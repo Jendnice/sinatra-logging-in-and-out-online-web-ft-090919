@@ -7,9 +7,9 @@
   </head>
   <body id="page-top">
     <p>
- <% if Helpers.is_logged_in?(params) %>
-    <h1>Welcome <%=Helpers.current_user(params).username%></h1></br>
-    <h3>Your Balance: <%=Helpers.current_user(params).balance%></h3></br>
+ <% if Helpers.is_logged_in?(session) %>
+    <h1>Welcome <%=Helpers.current_user(session).username%></h1></br>
+    <h3>Your Balance: <%=Helpers.current_user(session).balance%></h3></br>
  <% else %> 
     <a href="/"></a>
  <% end %>
